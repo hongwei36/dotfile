@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+cd /opt/homebrew/share/xray
+wget https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat -O geoip.dat
+wget https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat -O geosite.dat
+brew services restart xray

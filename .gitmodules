@@ -1,0 +1,6 @@
+[submodule ".config/yazi/plugins/exifaudio.yazi"]
+	path = .config/yazi/plugins/exifaudio.yazi
+	url = https://github.com/Sonico98/exifaudio.yazi.git
+[submodule ".config/yazi/plugins/hexyl.yazi"]
+	path = .config/yazi/plugins/hexyl.yazi
+	url = https://github.com/Reledia/hexyl.yazi.git

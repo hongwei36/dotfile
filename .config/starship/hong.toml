@@ -1,0 +1,52 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# $hostname\
+# $username\
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+add_newline = false
+
+[username]
+format = '$user '
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](blue)[@](red)$hostname[\]](blue bold) '
+disabled = false
+
+[directory]
+truncate_to_repo = false
+truncation_length = 8
+format = "[$path](blue) "
+
+[git_branch]
+format = '\([$branch](green) '
+
+[git_status]
+conflicted = '='
+untracked = '?${count}'
+modified = '!${count}'
+staged = '+${count}'
+# ahead = '⇡${count}'
+# behind = '⇣${count}'
+# diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+# stashed = '$'
+# renamed = '»${count}'
+# deleted = '✘${count}'
+format = '[$modified$staged$untracked$ahead_behind](green)\)'
+
+[character]
+disabled = false
+success_symbol = '[](bold purple)'
+error_symbol = '[](bold red)'
+vimcmd_symbol = '[](bold green)'
+vimcmd_replace_one_symbol = '[](bold purple)'
+vimcmd_replace_symbol = '[](bold purple)'
+vimcmd_visual_symbol = '[](bold yellow)'
